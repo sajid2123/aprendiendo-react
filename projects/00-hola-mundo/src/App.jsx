@@ -1,31 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard.jsx'
 
 export function App() {
-    const format = (userName) => `@${userName}`
+    // const format = (userName) => `@${userName}`
+
+
     return (
         <section className='Tw-app'>
             <TwitterFollowCard
-                formatUserName={format}
                 userName="midudev"
-                name="Miguel angel"
-                isFollowing="Siguiendo"
-            />
+                initialIsFollowing={false}
+            >
+                Midudev
+            </TwitterFollowCard>
 
             <TwitterFollowCard
-                formatUserName={format}
-                userName="midudev"
-                name="Miguel angel"
-                isFollowing="Siguiendo"
-            />
+                userName="elonmusk"
+                initialIsFollowing={true}
+            >
+                Elon musk
+            </TwitterFollowCard>
 
-            <TwitterFollowCard
-                formatUserName={format}
-                userName="midudev"
-                name="Miguel angel"
-                isFollowing="Siguiendo"
-            />
 
         </section>
     )
